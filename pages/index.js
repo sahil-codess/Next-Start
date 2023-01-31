@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
+  const handleClick = () => {
+    console.log('Placed your oder')
+    router.push('/products')
+  }
+
   return (
     <>
       <Head>
@@ -16,6 +23,7 @@ export default function Home() {
         Blog
       </Link>
       <Link href='/products'><button>products</button></Link>
+      <button onClick={handleClick}>Place Order</button>
 
     </>
   )
