@@ -24,6 +24,8 @@ export default function Home() {
       <Link href='/products'><button>products</button></Link>
       <button onClick={handleClick}>Place Order</button>
 
+      <Link href='/posts'><button>Posts</button></Link>
+
     </>
   )
 }
