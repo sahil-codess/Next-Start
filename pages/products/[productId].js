@@ -18,7 +18,7 @@ const Product = ({ product }) => {
 
 export default Product
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const { params } = context
 
     const response = await fetch(`http://localhost:4000/${params.productId}`)
@@ -29,12 +29,5 @@ export async function getStaticProps(context) {
             product: data,
         },
         revalidate: 10,
-    }
-}
-
-export async function getStaticPaths() {
-    return {
-        paths: [{ params: { productId: '1' } }],
-        fallback: true
     }
 }
