@@ -22,9 +22,9 @@ const CommentsPage = () => {
         console.log(data);
     }
 
-    const deleteComment = async (commentId) => {
+    const deleteComment = async commentId => {
         const response = await fetch(`/api/comments/${commentId}`, {
-            method: 'DELETE'
+            method: 'DELETE',
         })
         const data = await response.json()
         console.log(data)
