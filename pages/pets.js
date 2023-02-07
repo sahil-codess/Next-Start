@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 const Pets = () => {
     return (
       <div>
@@ -6,7 +6,7 @@ const Pets = () => {
               [1, 2, 3, 4, 5].map((path) => {
                   return (
                       <div key={path}>
-                          <img src={`/${path}.jpg`} alt='pets' width='280' height='420' />
+                          <Image src={`/${path}.jpg`} alt='pets' width='280' height='420' />
                       </div>
                   )
               })
