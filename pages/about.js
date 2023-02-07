@@ -1,18 +1,27 @@
-import Footer from "@/components/Footer"
+import Footer from "@/components/Footer";
+import Head from "next/head";
 
 const about = () => {
   return (
-    <div className="content"><h2>About</h2></div>
-  )
-}
+    <>
+    <Head>
+      <title>Sahilkhan Ahmadzai</title>
+      <meta name="description" content="About Page for Next Start" />
+    </Head>
+      <div className="content">
+        <h2>About</h2>
+      </div>
+    </>
+  );
+};
 
-export default about
+export default about;
 
 about.getLayout = function PageLayout(page) {
-  return(
+  return (
     <>
       {page}
       <Footer />
     </>
-  )
-}
+  );
+};
